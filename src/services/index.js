@@ -4,4 +4,5 @@ module.exports = {
   AuthService: require("./auth.service"),
   SubmisionService: require("./submision.service"),
   CirculoService: require("./circulo.service"),
+  OrganismoService: require("./organismo.service"),
 };
