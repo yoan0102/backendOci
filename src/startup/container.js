@@ -33,7 +33,11 @@ const {
 const { User, Submision, Circulo } = require("../models");
 
 //Repository
-const { UserRepository, SubmisionRepositroy } = require("../repositories");
+const {
+  UserRepository,
+  SubmisionRepository,
+  CirculoRepository,
+} = require("../repositories");
 
 container
   .register({
@@ -67,7 +71,8 @@ container
   })
   .register({
     UserRepository: asClass(UserRepository).singleton(),
-    SubmisionRepositroy: asClass(SubmisionRepositroy).singleton(),
+    SubmisionRepository: asClass(SubmisionRepository).singleton(),
+    CirculoRepository: asClass(CirculoRepository).singleton(),
   });
 
 module.exports = container;

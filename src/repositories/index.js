@@ -1,4 +1,5 @@
 module.exports = {
   UserRepository: require("./user.repository"),
-  SubmisionRepositroy: require("./submision.repository"),
+  SubmisionRepository: require("./submision.repository"),
+  CirculoRepository: require("./circulo.repository"),
 };

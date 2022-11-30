@@ -98,4 +98,4 @@ const CirculoSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model("circulo", CirculoSchema);
+module.exports = mongoose.model("circulo", CirculoSchema);
