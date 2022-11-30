@@ -8,7 +8,11 @@ const server = require(".");
 const { HomeService, UserService, AuthService } = require("../services");
 
 //controllers
-const { HomeController, UserController } = require("../controllers");
+const {
+  HomeController,
+  UserController,
+  AuthController,
+} = require("../controllers");
 const container = createContainer();
 
 //Routes
