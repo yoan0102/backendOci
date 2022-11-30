@@ -22,6 +22,7 @@ const {
   AuthController,
   SubmisionController,
   CirculoController,
+  ChildrenController,
   OrganismoController,
 } = require("../controllers");
 
@@ -76,7 +77,10 @@ container
       CirculoController.bind(CirculoController)
     ).singleton(),
     OrganismoController: asClass(
-      OrganismoController.bind(CirculoController)
+      OrganismoController.bind(OrganismoController)
+    ).singleton(),
+    ChildrenController: asClass(
+      ChildrenController.bind(ChildrenController)
     ).singleton(),
   })
   .register({
