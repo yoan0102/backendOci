@@ -5,7 +5,7 @@ const config = require("../config");
 const server = require(".");
 
 //services
-const { HomeService } = require("../services");
+const { HomeService, UserService } = require("../services");
 
 //controllers
 const { HomeController } = require("../controllers");
@@ -29,6 +29,7 @@ container
   })
   .register({
     HomeService: asClass(HomeService).singleton(),
+    UserService: asClass(UserService).singleton(),
   })
   .register({
     HomeController: asClass(HomeController.bind(HomeController)).singleton(),
@@ -40,6 +41,6 @@ container
     User: asValue(User),
   })
   .register({
-    UserRepository: asClass(UserRepository.bind(UserRepository)).singleton(),
+    UserRepository: asClass(UserRepository).singleton(),
   });
 module.exports = container;
