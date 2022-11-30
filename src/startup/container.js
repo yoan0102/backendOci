@@ -23,7 +23,7 @@ const { HomeRoutes, UserRoutes } = require("../routes/index.routes");
 const { User, Submision } = require("../models");
 
 //Repository
-const { UserRepository } = require("../repositories");
+const { UserRepository, SubmisionRepositroy } = require("../repositories");
 
 container
   .register({
@@ -51,5 +51,6 @@ container
   })
   .register({
     UserRepository: asClass(UserRepository).singleton(),
+    SubmisionRepositroy: asClass(SubmisionRepositroy).singleton(),
   });
 module.exports = container;

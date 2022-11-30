@@ -33,4 +33,4 @@ const SubmisionSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model < ISubmision > ("submision", SubmisionSchema);
+module.exports = mongoose.model("submision", SubmisionSchema);
