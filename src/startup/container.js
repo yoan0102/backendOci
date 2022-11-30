@@ -12,6 +12,7 @@ const {
   SubmisionService,
   CirculoService,
   OrganismoService,
+  ChildrenService,
 } = require("../services");
 
 //controllers
@@ -62,6 +63,7 @@ container
     SubmisionService: asClass(SubmisionService).singleton(),
     CirculoService: asClass(CirculoService).singleton(),
     OrganismoService: asClass(OrganismoService).singleton(),
+    ChildrenService: asClass(ChildrenService).singleton(),
   })
   .register({
     HomeController: asClass(HomeController.bind(HomeController)).singleton(),
