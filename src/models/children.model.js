@@ -79,82 +79,84 @@ const ChildrenSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    parents: new mongoose.Schema({
-      fullNameParent: {
-        type: String,
-        required: true,
-      },
-      uniqueParent: {
-        type: Boolean,
-      },
-      addressParent: {
-        type: String,
-      },
-      phoneNumberParent: {
-        type: String,
-        required: true,
-      },
-      typeParent: {
-        type: String,
-        enum: ["madre", "padre", "tutor"],
-        default: "madre",
-      },
-      occupation: {
-        type: String,
-        enum: ["trabajador", "jubilado", "asistenciado"],
-        default: "trabajador",
-      },
-      convivencia: {
-        type: Boolean,
-        required: true,
-      },
-      work: {
-        type: String,
-        required: true,
-      },
-      workAddress: {
-        type: String,
-        required: true,
-      },
-      workPosition: {
-        type: String,
-      },
-      organismo: {
-        type: String,
-        required: true,
-      },
-      workPhoneParent: {
-        type: String,
-      },
-      entryTime: {
-        type: Date,
-      },
-      outTime: {
-        type: Date,
-      },
-      salary: {
-        type: Number,
-      },
-      otherChildren: {
-        type: Boolean,
-        default: false,
-      },
-      cantOtherChildren: {
-        type: Number,
-      },
-      ciOtherChildren: {
-        type: String,
-      },
-      pregnant: {
-        type: Boolean,
-      },
-      student: {
-        type: Boolean,
-      },
-      deaf: {
-        type: Boolean,
-      },
-    }),
+    parents: [
+      new mongoose.Schema({
+        fullNameParent: {
+          type: String,
+          required: true,
+        },
+        uniqueParent: {
+          type: Boolean,
+        },
+        addressParent: {
+          type: String,
+        },
+        phoneNumberParent: {
+          type: String,
+          required: true,
+        },
+        typeParent: {
+          type: String,
+          enum: ["madre", "padre", "tutor"],
+          default: "madre",
+        },
+        occupation: {
+          type: String,
+          enum: ["trabajador", "jubilado", "asistenciado"],
+          default: "trabajador",
+        },
+        convivencia: {
+          type: Boolean,
+          required: true,
+        },
+        work: {
+          type: String,
+          required: true,
+        },
+        workAddress: {
+          type: String,
+          required: true,
+        },
+        workPosition: {
+          type: String,
+        },
+        organismo: {
+          type: String,
+          required: true,
+        },
+        workPhoneParent: {
+          type: String,
+        },
+        entryTime: {
+          type: Date,
+        },
+        outTime: {
+          type: Date,
+        },
+        salary: {
+          type: Number,
+        },
+        otherChildren: {
+          type: Boolean,
+          default: false,
+        },
+        cantOtherChildren: {
+          type: Number,
+        },
+        ciOtherChildren: {
+          type: String,
+        },
+        pregnant: {
+          type: Boolean,
+        },
+        student: {
+          type: Boolean,
+        },
+        deaf: {
+          type: Boolean,
+        },
+      }),
+    ],
   },
   {
     timestamps: true,
