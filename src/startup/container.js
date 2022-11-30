@@ -39,6 +39,7 @@ const {
   UserRepository,
   SubmisionRepository,
   CirculoRepository,
+  OrganismoRepository,
 } = require("../repositories");
 
 //Creacion del container de dependencias
@@ -84,6 +85,7 @@ container
     UserRepository: asClass(UserRepository).singleton(),
     SubmisionRepository: asClass(SubmisionRepository).singleton(),
     CirculoRepository: asClass(CirculoRepository).singleton(),
+    OrganismoRepository: asClass(OrganismoRepository).singleton(),
   });
 
 module.exports = container;

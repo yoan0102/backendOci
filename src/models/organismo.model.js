@@ -11,7 +11,8 @@ const OrganismoSchema = new mongoose.Schema(
       required: true,
     },
     priorizado: {
-      type: boolean,
+      type: Boolean,
+      default: false,
     },
   },
   {
