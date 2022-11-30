@@ -3,4 +3,5 @@ module.exports = {
   Submision: require("./submision.model"),
   Circulo: require("./circulo.model"),
   Organismo: require("./organismo.model"),
+  Children: require("./children.model"),
 };

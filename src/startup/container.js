@@ -35,7 +35,7 @@ const {
 } = require("../routes/index.routes");
 
 //Models
-const { User, Submision, Circulo, Organismo } = require("../models");
+const { User, Submision, Circulo, Organismo, Children } = require("../models");
 
 //Repository
 const {
@@ -81,13 +81,14 @@ container
     UserRoutes: asFunction(UserRoutes).singleton(),
     SubmisionRoutes: asFunction(SubmisionRoutes).singleton(),
     CirculoRoutes: asFunction(CirculoRoutes).singleton(),
-    CirculoRoutes: asFunction(OrganismoRoutes).singleton(),
+    OrganismoRoutes: asFunction(OrganismoRoutes).singleton(),
   })
   .register({
     User: asValue(User),
     Submision: asValue(Submision),
     Circulo: asValue(Circulo),
     Organismo: asValue(Organismo),
+    Children: asValue(Children),
   })
   .register({
     UserRepository: asClass(UserRepository).singleton(),
