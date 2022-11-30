@@ -10,6 +10,7 @@ const {
   UserService,
   AuthService,
   SubmisionService,
+  CirculoService,
 } = require("../services");
 
 //controllers
@@ -50,6 +51,7 @@ container
     UserService: asClass(UserService).singleton(),
     AuthService: asClass(AuthService).singleton(),
     SubmisionService: asClass(SubmisionService).singleton(),
+    CirculoService: asClass(CirculoService).singleton(),
   })
   .register({
     HomeController: asClass(HomeController.bind(HomeController)).singleton(),
