@@ -23,7 +23,11 @@ const container = createContainer();
 
 //Routes
 const Routes = require("../routes");
-const { HomeRoutes, UserRoutes } = require("../routes/index.routes");
+const {
+  HomeRoutes,
+  UserRoutes,
+  SubmisionRoutes,
+} = require("../routes/index.routes");
 
 //Models
 const { User, Submision } = require("../models");
@@ -54,6 +58,7 @@ container
   .register({
     HomeRoutes: asFunction(HomeRoutes).singleton(),
     UserRoutes: asFunction(UserRoutes).singleton(),
+    SubmisionRoutes: asFunction(SubmisionRoutes).singleton(),
   })
   .register({
     User: asValue(User),
@@ -63,4 +68,5 @@ container
     UserRepository: asClass(UserRepository).singleton(),
     SubmisionRepositroy: asClass(SubmisionRepositroy).singleton(),
   });
+
 module.exports = container;
