@@ -13,7 +13,7 @@ const container = createContainer();
 
 //Routes
 const Routes = require("../routes");
-const { HomeRoutes } = require("../routes/index.routes");
+const { HomeRoutes, UserRoutes } = require("../routes/index.routes");
 
 //Models
 const { User } = require("../models");
@@ -37,6 +37,7 @@ container
   })
   .register({
     HomeRoutes: asFunction(HomeRoutes).singleton(),
+    UserRoutes: asFunction(UserRoutes).singleton(),
   })
   .register({
     User: asValue(User),

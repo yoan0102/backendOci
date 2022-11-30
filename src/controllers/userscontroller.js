@@ -35,7 +35,7 @@ class UserController {
     return res.status(204).send("No Content");
   }
 
-  async userByUserName(req, res, next) {}
+  async userByUserName(req, res) {}
 }
 
 module.exports = UserController;
