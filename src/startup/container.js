@@ -19,8 +19,8 @@ const {
   UserController,
   AuthController,
   SubmisionController,
+  CirculoController,
 } = require("../controllers");
-const container = createContainer();
 
 //Routes
 const Routes = require("../routes");
@@ -39,6 +39,9 @@ const {
   SubmisionRepository,
   CirculoRepository,
 } = require("../repositories");
+
+//Creacion del container de dependencias
+const container = createContainer();
 
 container
   .register({
@@ -59,6 +62,9 @@ container
     AuthController: asClass(AuthController.bind(AuthController)).singleton(),
     SubmisionController: asClass(
       SubmisionController.bind(SubmisionController)
+    ).singleton(),
+    CirculoController: asClass(
+      CirculoController.bind(CirculoController)
     ).singleton(),
   })
   .register({
