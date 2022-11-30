@@ -5,13 +5,19 @@ const config = require("../config");
 const server = require(".");
 
 //services
-const { HomeService, UserService, AuthService } = require("../services");
+const {
+  HomeService,
+  UserService,
+  AuthService,
+  SubmisionService,
+} = require("../services");
 
 //controllers
 const {
   HomeController,
   UserController,
   AuthController,
+  SubmisionController,
 } = require("../controllers");
 const container = createContainer();
 
@@ -35,11 +41,15 @@ container
     HomeService: asClass(HomeService).singleton(),
     UserService: asClass(UserService).singleton(),
     AuthService: asClass(AuthService).singleton(),
+    SubmisionService: asClass(SubmisionService).singleton(),
   })
   .register({
     HomeController: asClass(HomeController.bind(HomeController)).singleton(),
     UserController: asClass(UserController.bind(UserController)).singleton(),
     AuthController: asClass(AuthController.bind(AuthController)).singleton(),
+    SubmisionController: asClass(
+      SubmisionController.bind(SubmisionController)
+    ).singleton(),
   })
   .register({
     HomeRoutes: asFunction(HomeRoutes).singleton(),
