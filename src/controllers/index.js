@@ -4,4 +4,5 @@ module.exports = {
   AuthController: require("./auth.controller"),
   SubmisionController: require("./submision.controller"),
   CirculoController: require("./circulo.controller"),
+  OrganismoController: require("./organismo.controller"),
 };

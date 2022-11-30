@@ -21,6 +21,7 @@ const {
   AuthController,
   SubmisionController,
   CirculoController,
+  OrganismoController,
 } = require("../controllers");
 
 //Routes
@@ -69,6 +70,9 @@ container
     ).singleton(),
     CirculoController: asClass(
       CirculoController.bind(CirculoController)
+    ).singleton(),
+    OrganismoController: asClass(
+      OrganismoController.bind(CirculoController)
     ).singleton(),
   })
   .register({
