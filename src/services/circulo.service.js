@@ -1,4 +1,4 @@
-const BaseService = require("./base.service");
+const BaseService = require('./base.service');
 let _circuloRepository = null;
 class CirculoService extends BaseService {
   constructor({ CirculoRepository }) {

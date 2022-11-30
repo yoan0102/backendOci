@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const OrganismoSchema = new mongoose.Schema(
   {
@@ -21,4 +21,4 @@ const OrganismoSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("organismo", OrganismoSchema);
+module.exports = mongoose.model('organismo', OrganismoSchema);

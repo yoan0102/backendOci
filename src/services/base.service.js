@@ -7,7 +7,7 @@ class BaseService {
     if (!id) {
       const error = new Error();
       error.status = 400;
-      error.message = "id es obligatorio";
+      error.message = 'id es obligatorio';
       throw error;
     }
 
@@ -16,7 +16,7 @@ class BaseService {
     if (!currentEntity) {
       const error = new Error();
       error.status = 404;
-      error.message = "Entidad no existe";
+      error.message = 'Entidad no existe';
       throw error;
     }
 
@@ -35,7 +35,7 @@ class BaseService {
     if (!id) {
       const error = new Error();
       error.status = 400;
-      error.message = "id es obligatorio";
+      error.message = 'id es obligatorio';
       throw error;
     }
 
@@ -46,7 +46,7 @@ class BaseService {
     if (!id) {
       const error = new Error();
       error.status = 400;
-      error.message = "id es obligatorio";
+      error.message = 'id es obligatorio';
       throw error;
     }
     return await this.repository.delete(id);

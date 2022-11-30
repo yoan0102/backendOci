@@ -1,9 +1,9 @@
-const jwt = require("jsonwebtoken");
+const jwt = require('jsonwebtoken');
 
 exports.generateToken = (uid) => {
   const expiresIn = 60 * 15;
   try {
-    const token = jwt.sign({ uid }, process.env.JWT_SECRET || "secret", {
+    const token = jwt.sign({ uid }, process.env.JWT_SECRET || 'secret', {
       expiresIn,
     });
     return { token, expiresIn };

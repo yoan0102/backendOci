@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const CirculoSchema = new mongoose.Schema(
   {
@@ -98,4 +98,4 @@ const CirculoSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("circulo", CirculoSchema);
+module.exports = mongoose.model('circulo', CirculoSchema);

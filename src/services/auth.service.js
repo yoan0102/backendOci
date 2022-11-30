@@ -1,4 +1,4 @@
-const { ManagerToken } = require("../helpers");
+const { ManagerToken } = require('../helpers');
 let _userRepository = null;
 
 class AuthServices {
@@ -7,11 +7,11 @@ class AuthServices {
   }
 
   async sigIn(nick_name, password) {
-    const user = await User.findOne({ nick_name: nick_name });
+    const user = await User.findOne({ nick_name });
 
     const validPassword = await user?.comparePasswords(password);
     if (!validPassword) {
-      throw new Error("Contraseña no valida");
+      throw new Error('Contraseña no valida');
     }
 
     if (user?.status === false) {

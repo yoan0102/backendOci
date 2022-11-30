@@ -32,7 +32,7 @@ class OrganismoController {
   async delete(req, res) {
     const { organismoId } = req.params;
     await _organismoService.delete(organismoId);
-    return res.status(204).send("No Content");
+    return res.status(204).send('No Content');
   }
 }
 

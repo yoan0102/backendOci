@@ -1,4 +1,4 @@
-const BaseRepository = require("./base.repository");
+const BaseRepository = require('./base.repository');
 let _organismo = null;
 class OrganismoRepository extends BaseRepository {
   constructor({ Organismo }) {

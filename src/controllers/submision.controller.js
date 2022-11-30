@@ -32,7 +32,7 @@ class SubmisionController {
   async delete(req, res) {
     const { submisionId } = req.params;
     await _submisionService.delete(submisionId);
-    return res.status(204).send("No Content");
+    return res.status(204).send('No Content');
   }
 }
 

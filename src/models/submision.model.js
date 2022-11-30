@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const SubmisionSchema = new mongoose.Schema(
   {
@@ -8,8 +8,8 @@ const SubmisionSchema = new mongoose.Schema(
     },
     type: {
       type: String,
-      enum: ["nueva", "traslado"],
-      default: "nueva",
+      enum: ['nueva', 'traslado'],
+      default: 'nueva',
     },
     social_case: {
       type: Boolean,
@@ -23,7 +23,7 @@ const SubmisionSchema = new mongoose.Schema(
       default: true,
     },
     children: {
-      type: [{ type: mongoose.Schema.Types.ObjectId, ref: "children" }],
+      type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'children' }],
       required: true,
     },
   },
@@ -33,4 +33,4 @@ const SubmisionSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("submision", SubmisionSchema);
+module.exports = mongoose.model('submision', SubmisionSchema);

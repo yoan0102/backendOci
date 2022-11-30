@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const ChildrenSchema = new mongoose.Schema(
   {
@@ -31,8 +31,8 @@ const ChildrenSchema = new mongoose.Schema(
       type: String,
       required: true,
       enum: {
-        values: ["masculino", "femenino"],
-        message: "{VALUE} no soportado",
+        values: ['masculino', 'femenino'],
+        message: '{VALUE} no soportado',
       },
     },
     street: {
@@ -69,7 +69,7 @@ const ChildrenSchema = new mongoose.Schema(
       default: true,
     },
     circulo: {
-      type: [{ type: mongoose.Schema.Types.ObjectId, ref: "circulo" }],
+      type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'circulo' }],
     },
     lat: {
       type: Number,
@@ -97,13 +97,13 @@ const ChildrenSchema = new mongoose.Schema(
         },
         typeParent: {
           type: String,
-          enum: ["madre", "padre", "tutor"],
-          default: "madre",
+          enum: ['madre', 'padre', 'tutor'],
+          default: 'madre',
         },
         occupation: {
           type: String,
-          enum: ["trabajador", "jubilado", "asistenciado"],
-          default: "trabajador",
+          enum: ['trabajador', 'jubilado', 'asistenciado'],
+          default: 'trabajador',
         },
         convivencia: {
           type: Boolean,
@@ -164,4 +164,4 @@ const ChildrenSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("children", ChildrenSchema);
+module.exports = mongoose.model('children', ChildrenSchema);

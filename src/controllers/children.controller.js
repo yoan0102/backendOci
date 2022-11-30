@@ -32,7 +32,7 @@ class ChildrenController {
   async delete(req, res) {
     const { childrenId } = req.params;
     await _childrenService.delete(childrenId);
-    return res.status(204).send("No Content");
+    return res.status(204).send('No Content');
   }
 }
 

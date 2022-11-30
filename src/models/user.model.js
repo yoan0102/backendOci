@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
+const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
 
 const UserSchema = new mongoose.Schema(
   {
@@ -26,8 +26,8 @@ const UserSchema = new mongoose.Schema(
     },
     role: {
       type: String,
-      enum: ["ADMIN_ROLE", "USER_ROLE"],
-      default: "USER_ROLE",
+      enum: ['ADMIN_ROLE', 'USER_ROLE'],
+      default: 'USER_ROLE',
     },
     status: {
       type: Boolean,
@@ -54,10 +54,10 @@ UserSchema.methods.comparePasswords = function (password) {
   return bcrypt.compareSync(password, this.password);
 };
 
-UserSchema.pre("save", async function (next) {
+UserSchema.pre('save', async function (next) {
   // eslint-disable-next-line prefer-const
   let user = this;
-  if (!user.isModified("password")) {
+  if (!user.isModified('password')) {
     return next();
   }
 
@@ -67,4 +67,4 @@ UserSchema.pre("save", async function (next) {
   next();
 });
 
-module.exports = mongoose.model("user", UserSchema);
+module.exports = mongoose.model('user', UserSchema);

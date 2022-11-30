@@ -1,3 +1,3 @@
 module.exports = {
-  ManagerToken: require("./managerToken"),
+  ManagerToken: require('./managerToken'),
 };

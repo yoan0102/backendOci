@@ -1,4 +1,4 @@
-const BaseService = require("./base.service");
+const BaseService = require('./base.service');
 let _submisionRepository = null;
 class SubmisionService extends BaseService {
   constructor({ SubmisionRepository }) {

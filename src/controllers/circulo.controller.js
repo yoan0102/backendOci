@@ -32,7 +32,7 @@ class CirculoController {
   async delete(req, res) {
     const { circuloId } = req.params;
     await _circuloService.delete(circuloId);
-    return res.status(204).send("No Content");
+    return res.status(204).send('No Content');
   }
 }
 

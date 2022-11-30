@@ -1,10 +1,10 @@
-const { createContainer, asClass, asValue, asFunction } = require("awilix");
+const { createContainer, asClass, asValue, asFunction } = require('awilix');
 
-//Config
-const config = require("../config");
-const server = require(".");
+// Config
+const config = require('../config');
+const server = require('.');
 
-//services
+// services
 const {
   HomeService,
   UserService,
@@ -13,9 +13,9 @@ const {
   CirculoService,
   OrganismoService,
   ChildrenService,
-} = require("../services");
+} = require('../services');
 
-//controllers
+// controllers
 const {
   HomeController,
   UserController,
@@ -24,31 +24,25 @@ const {
   CirculoController,
   ChildrenController,
   OrganismoController,
-} = require("../controllers");
+} = require('../controllers');
 
-//Routes
-const Routes = require("../routes");
-const {
-  HomeRoutes,
-  UserRoutes,
-  SubmisionRoutes,
-  CirculoRoutes,
-  OrganismoRoutes,
-} = require("../routes/index.routes");
+// Routes
+const Routes = require('../routes');
+const { HomeRoutes, UserRoutes, SubmisionRoutes, CirculoRoutes, OrganismoRoutes } = require('../routes/index.routes');
 
-//Models
-const { User, Submision, Circulo, Organismo, Children } = require("../models");
+// Models
+const { User, Submision, Circulo, Organismo, Children } = require('../models');
 
-//Repository
+// Repository
 const {
   UserRepository,
   SubmisionRepository,
   CirculoRepository,
   OrganismoRepository,
   ChildrenRepository,
-} = require("../repositories");
+} = require('../repositories');
 
-//Creacion del container de dependencias
+// Creacion del container de dependencias
 const container = createContainer();
 
 container
@@ -70,18 +64,10 @@ container
     HomeController: asClass(HomeController.bind(HomeController)).singleton(),
     UserController: asClass(UserController.bind(UserController)).singleton(),
     AuthController: asClass(AuthController.bind(AuthController)).singleton(),
-    SubmisionController: asClass(
-      SubmisionController.bind(SubmisionController)
-    ).singleton(),
-    CirculoController: asClass(
-      CirculoController.bind(CirculoController)
-    ).singleton(),
-    OrganismoController: asClass(
-      OrganismoController.bind(OrganismoController)
-    ).singleton(),
-    ChildrenController: asClass(
-      ChildrenController.bind(ChildrenController)
-    ).singleton(),
+    SubmisionController: asClass(SubmisionController.bind(SubmisionController)).singleton(),
+    CirculoController: asClass(CirculoController.bind(CirculoController)).singleton(),
+    OrganismoController: asClass(OrganismoController.bind(OrganismoController)).singleton(),
+    ChildrenController: asClass(ChildrenController.bind(ChildrenController)).singleton(),
   })
   .register({
     HomeRoutes: asFunction(HomeRoutes).singleton(),
