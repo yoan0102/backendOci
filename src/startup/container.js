@@ -20,7 +20,7 @@ const Routes = require("../routes");
 const { HomeRoutes, UserRoutes } = require("../routes/index.routes");
 
 //Models
-const { User } = require("../models");
+const { User, Submision } = require("../models");
 
 //Repository
 const { UserRepository } = require("../repositories");
@@ -47,6 +47,7 @@ container
   })
   .register({
     User: asValue(User),
+    Submision: asValue(Submision),
   })
   .register({
     UserRepository: asClass(UserRepository).singleton(),
