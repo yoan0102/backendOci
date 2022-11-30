@@ -28,6 +28,7 @@ const {
   HomeRoutes,
   UserRoutes,
   SubmisionRoutes,
+  CirculoRoutes,
 } = require("../routes/index.routes");
 
 //Models
@@ -71,6 +72,7 @@ container
     HomeRoutes: asFunction(HomeRoutes).singleton(),
     UserRoutes: asFunction(UserRoutes).singleton(),
     SubmisionRoutes: asFunction(SubmisionRoutes).singleton(),
+    CirculoRoutes: asFunction(CirculoRoutes).singleton(),
   })
   .register({
     User: asValue(User),

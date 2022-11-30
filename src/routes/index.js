@@ -12,6 +12,7 @@ module.exports = function ({ HomeRoutes, SubmisionRoutes }) {
   apiRoutes.use(express.json()).use(cors()).use(helmet()).use(compression());
   apiRoutes.use("/home", HomeRoutes);
   apiRoutes.use("/submision", SubmisionRoutes);
+  apiRoutes.use("/circulo", SubmisionRoutes);
   router.use("/v1/api", apiRoutes);
 
   router.use(NotFoundMiddleware);
