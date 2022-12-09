@@ -14,6 +14,11 @@ const OrganismoSchema = new mongoose.Schema(
       type: Boolean,
       default: false,
     },
+    weight: {
+      type: Number,
+      default: 8,
+    },
+
   },
   {
     timestamps: true,

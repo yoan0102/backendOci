@@ -20,7 +20,7 @@ class BaseRepository {
   }
 
   async delete(id) {
-    await this.entity.findByIdAndUpdate(id, { status: false }, { new: true });
+    await this.entity.findByIdAndDelete(id);
     return true;
   }
 }

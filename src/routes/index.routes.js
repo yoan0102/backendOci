@@ -4,4 +4,5 @@ module.exports = {
   SubmisionRoutes: require('./submision.routes'),
   CirculoRoutes: require('./circulo.routes'),
   OrganismoRoutes: require('./organismo.routes'),
+  ChildrenRoutes: require('./children.routes'),
 };
