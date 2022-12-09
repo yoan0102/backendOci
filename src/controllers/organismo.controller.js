@@ -7,7 +7,7 @@ class OrganismoController {
 
   async get(req, res) {
     const { organismoId } = req.params;
-    const organismo = await _organismoService.get(circuloId);
+    const organismo = await _organismoService.get(organismoId);
     return res.send(organismo);
   }
 
