@@ -3,11 +3,11 @@ const { Router } = require('express');
 module.exports = function ({ SubmisionController }) {
   const router = Router();
 
-  router.get('/:userId', SubmisionController.get);
+  router.get('/:submisionId', SubmisionController.get);
   router.get('/', SubmisionController.getAll);
   router.post('/', SubmisionController.create);
-  router.patch('/:userId', SubmisionController.update);
-  router.delete('/:userId', SubmisionController.delete);
+  router.patch('/:submisionId', SubmisionController.update);
+  router.delete('/:submisionId', SubmisionController.delete);
 
   return router;
 };
